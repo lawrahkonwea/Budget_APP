@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :transfers, only: [:index, :new, :create, :destroy]
   resources :groups, only: [:index, :new, :create, :destroy]
   # Defines the root path route ("/")
-  # root "users#index"
+  root "users#index"
 end
