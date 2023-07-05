@@ -5,5 +5,13 @@ Rails.application.routes.draw do
   resources :transfers, only: [:index, :new, :create, :destroy]
   resources :groups, only: [:index, :new, :create, :destroy]
   # Defines the root path route ("/")
-  root "users#index"
+  
+  devise_scope :user do
+    authenticated :user do
+      root "groups#index", as: :authenticated_root
+    end
+    unauthenticated :user do
+      root "home#index", as: :unauthenticated_root
+    end
+  end
 end
