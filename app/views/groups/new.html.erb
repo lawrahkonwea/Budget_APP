@@ -1,0 +1,19 @@
+<%= render 'shared/navbar' %>
+<div><button><%= link_to "back", groups_path  %></button></div>
+<h2>New Category</h2>
+<div>
+    <%= form_with(model: @group, url: groups_path, method: :post) do |f| %>
+
+    <div class="field">
+        <%= f.label :name %>
+        <%= f.text_field :name, placeholder: "Name", autocomplete: "name" %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :icon, class: "label" %>
+      <%= f.text_field :icon, placeholder: "Icon URL", autocomplete: "name" %>
+    </div>
+
+    <div><%= f.submit 'save' %></div>
+    <% end %>
+    </div>

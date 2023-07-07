@@ -1,0 +1,22 @@
+<%= render 'shared/navbar', group: @groups %>
+<div><button><%= link_to "back", groups_path  %></button></div>
+<h2>All Category</h2>
+
+<section>
+  <% @groups.each do |group| %>
+    <div>
+      <%= image_tag(group.icon || '') %>
+      <p><%= link_to group.name, group_transfers_path(group) %></p>
+    </div>
+    <div>
+      <span>Total Spent:</span>
+      <span>
+        <p>$<%= group.transfers.sum(:amount) %></p>
+      </span>
+    </div>
+  <% end %>
+  <div>
+    <button><%= link_to "New category", new_group_path %></button>
+  </div>
+</section>
+

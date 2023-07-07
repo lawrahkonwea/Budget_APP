@@ -1,0 +1,7 @@
+<div class="nav-group">
+<p class="user-info"> <%= current_user.full_name %> </p>
+<div class="links">
+    <%= link_to "Transaction", groups_path, class: "btn" %>
+    <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class:"btn" %>
+</div>
+</div>
