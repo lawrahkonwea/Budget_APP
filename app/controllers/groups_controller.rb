@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
     @groups = Group.created_by_current_user(current_user)
   end
 
-  def new 
+  def new
     @group = Group.new
   end
 
@@ -16,12 +16,12 @@ class GroupsController < ApplicationController
       redirect_to groups_path, notice: 'Category was successfully created'
     else
       render :new
-    end 
+    end
   end
 
- private
+  private
 
- def group_params
-  params.require(:group).permit(:name, :icon)
- end
+  def group_params
+    params.require(:group).permit(:name, :icon)
+  end
 end

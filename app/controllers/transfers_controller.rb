@@ -2,7 +2,7 @@ class TransfersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @transfer = Transfer.joins(:groups).where(groups: { id: params[:group_id] }).order(created_at: :desc)
+    @transfers = Transfer.joins(:groups).where(groups: { id: params[:group_id] }).order(created_at: :desc)
     @group = Group.find(params[:group_id])
   end
 
@@ -15,20 +15,34 @@ class TransfersController < ApplicationController
     params = transfer_params
     @transfer = Transfer.new(name: params[:name], amount: params[:amount])
     @transfer.author = current_user
-    @groups_id = params[:ids]
-    @groups_id.each do |id|
-      group = Group.find(id) unless id == ''
-      @transfer.groups.push(group) unless group.nil?
+    @groups_id = params[:group_ids]
+
+     @groups_id.each do |id|
+    unless id.blank?
+      group = Group.find_by(id: id)
+      @transfer.groups << group unless group.nil?
     end
+  end
+
+    # @groups_id.each do |id|
+    #   group = Group.find(id) unless id == ''
+    #   @transfer.groups.push(group) unless group.nil?
+    # end
+
+    return :new unless @transfer.groups.any?
 
     if @transfer.save
-      redirect_to groups_path(@transfer.groups.first.id), notice: 'Transfer added successfully'
+      redirect_to group_transfers_path(@transfer.groups.first.id), notice: 'Transfer added successfully'
     else
       render :new
     end
   end
 
+  def show
+    @transfer = Transfer.find(params[:id])
+  end
+
   def transfer_params
-    params.require(:transfer).permit(:name, :amount, :group_ids)
+    params.require(:transfer).permit(:name, :amount, group_ids: [])
   end
 end

@@ -1,0 +1,32 @@
+<%= render 'shared/navbar', group: @groups %>
+
+<div>
+  <button><%= link_to "Back", groups_path %></button>
+</div>
+
+<div>
+  <h3>Expenses</h3>
+  <% if @transfers.empty? %>
+    <h3>You do not have any transfers yet</h3>
+  <% else %>
+    <div>
+      <h1><%= @group.name %></h1>
+      <span>$<%= @transfers.sum(:amount) %></span>
+      <div>
+        <% @transfers.each do |transfer| %>
+          <div>
+            <div><%= image_tag(@group.icon || '') %></div>
+            <div>
+              <h2><%= transfer.name %></h2>
+            </div>
+            <div>
+              <span>$<%= transfer.amount %></span>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+  
+  <%= link_to 'Add new transaction', new_group_transfer_path %>
+</div>
