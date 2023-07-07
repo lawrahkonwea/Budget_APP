@@ -17,12 +17,12 @@ class TransfersController < ApplicationController
     @transfer.author = current_user
     @groups_id = params[:group_ids]
 
-     @groups_id.each do |id|
-    unless id.blank?
-      group = Group.find_by(id: id)
-      @transfer.groups << group unless group.nil?
+    @groups_id.each do |id|
+      unless id.blank?
+        group = Group.find_by(id:)
+        @transfer.groups << group unless group.nil?
+      end
     end
-  end
 
     # @groups_id.each do |id|
     #   group = Group.find(id) unless id == ''
