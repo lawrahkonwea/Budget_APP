@@ -6,3 +6,259 @@
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
 }
+
+p,
+h1,
+h2,
+h3 {
+  font-family: "Lobster", cursive;
+}
+
+.Home_container {
+  background-color: white;
+  color: #606467;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home_button {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  width: 50%;
+  gap: 20px;
+}
+
+.tracker {
+  margin-bottom: 10px;
+}
+
+.welcome {
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: #3778c2;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.signup_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  background-color: #3778c2;
+  height: 100vh;
+}
+
+.signup_form h2 {
+  color: white;
+  margin-bottom: 2em;
+}
+
+.signup_div {
+  background-color: white;
+  padding: 2em 2em;
+  border-radius: 10px;
+  height: 20em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 6px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.field input[type="name"],
+.field input[type="email"],
+.field input[type="password"] {
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  color: #434b54;
+  background-color: #fff;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.input-field {
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  color: #434b54;
+  background-color: #fff;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.up {
+  background-color: #3778c2;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: 0.2s ease-in-out;
+}
+
+.log_link a {
+  text-decoration: none;
+  color: #3778c2;
+}
+
+.nav-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3778c2;
+  padding: 2% 2%;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  padding: 0 3%;
+}
+
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+
+.btn1 {
+  cursor: pointer;
+  border: none;
+  background-color: #3778c2;
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.category {
+  background-color: #5fb523;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 2rem;
+  border: none;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.back {
+  background-color: gray;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border: none;
+}
+
+.back a,
+.category a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.group_main_div {
+  display: flex;
+  flex-direction: column;
+}
+
+.group_main_title {
+  align-self: center;
+  font-size: 2rem;
+}
+
+.main_group_section {
+  display: flex;
+  flex-direction: column;
+  background: #f1f1f1;
+  padding: 1.5rem 2rem;
+  gap: 1rem;
+}
+
+.groups_section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #fff;
+  justify-content: space-between;
+  padding: 0.4rem;
+  border-radius: 7px;
+  align-items: center;
+  gap: 40px;
+}
+
+.group-image {
+  height: 50%;
+  width: 50%;
+}
+
+.group_name_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 1rem;
+}
+
+.group_name_div a {
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: #434b54;
+  align-items: center;
+}
+
+.group_total_amount {
+  display: flex;
+  justify-content: end;
+}
+
+.group_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  height: 50vh;
+  gap: 25px;
+}
+
+.field {
+  padding: 0.5em 1em;
+  border-radius: 6px;
+  color: #434b54;
+  background-color: #fff;
+  margin-bottom: 5px;
+}
+
+.transact_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.transact_subdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group-details {
+  display: flex;
+  flex-direction: column;
+}

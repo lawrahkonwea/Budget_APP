@@ -1,21 +1,19 @@
 <%= render 'shared/navbar' %>
+<button class="back"><%= link_to "back", groups_path  %></button>
 
-<div>
-  <button><%= link_to "Back", groups_path %></button>
-</div>
-
-<div>
-  <h2>Add New Expense</h2>
+<div class="group_main_div">
+  <h2 class="group_main_title">Add New Expense</h2>
 
   <%= form_with(model: @transfer, url: group_transfers_path, method: :post) do |f| %>
-    <div class="field">
+  <div  class="group_form">
+    <div>
       <%= f.label :name %>
-      <%= f.text_field :name, placeholder: 'Name Expenses' %>
+      <%= f.text_field :name, placeholder: 'Name Expenses', class: "field" %>
     </div>
 
     <div class="field">
       <%= f.label :amount %>
-      <%= f.number_field :amount, step: 1, placeholder: 'Amount Spent' %>
+      <%= f.number_field :amount, step: 1, placeholder: 'Amount Spent', class: "field"%>
     </div>
 
     <% if @groups.present? %>
@@ -29,11 +27,8 @@
         <% end %>
       </div>
     <% end %>
-
-    <%= f.submit 'Save', class: 'Submit-expense-btn' %>
+  
+    <%= f.submit 'Save', class: 'category' %>
+    </div>
   <% end %>
-
-  <footer>
-    © 2023 Budget App. All rights reserved.
-  </footer>
 </div>
