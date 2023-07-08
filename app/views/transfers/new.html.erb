@@ -1,4 +1,5 @@
 <%= render 'shared/navbar' %>
+
 <button class="back"><%= link_to "back", groups_path  %></button>
 
 <div class="group_main_div">
@@ -21,7 +22,7 @@
         <%= f.label :groups %>
         <% @groups.each do |group| %>
           <div class="checkbox">
-            <%= f.check_box :group_ids, { multiple: true }, group.id, nil %>
+            <%= f.check_box :group_ids, { multiple: true }, group.id %>
             <%= f.label group.name %>
           </div>
         <% end %>
