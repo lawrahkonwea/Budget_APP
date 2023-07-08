@@ -41,7 +41,7 @@ h3 {
 }
 
 .button {
-  background-color:#3778c2;
+  background-color: #3778c2;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -85,7 +85,6 @@ h3 {
 .field input[type="name"],
 .field input[type="email"],
 .field input[type="password"] {
-  
   padding: 0.5em 1em;
   border-radius: 6px;
   color: #434b54;
@@ -104,7 +103,7 @@ h3 {
 }
 
 .up {
-  background-color:#3778c2;
+  background-color: #3778c2;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
@@ -128,7 +127,6 @@ h3 {
   align-items: center;
   background-color: #3778c2;
   padding: 2% 2%;
-
 }
 
 .links {
@@ -149,11 +147,10 @@ h3 {
   background-color: #3778c2;
   color: #fff;
   font-size: 0.9rem;
-
 }
 
 .category {
-  background-color:#5fb523;
+  background-color: #5fb523;
   font-size: 1rem;
   font-weight: bold;
   padding: 0.5rem 2rem;
@@ -171,7 +168,8 @@ h3 {
   border: none;
 }
 
-.back a, .category a {
+.back a,
+.category a {
   text-decoration: none;
   color: #fff;
 }
@@ -204,7 +202,6 @@ h3 {
   align-items: center;
   gap: 40px;
 }
-
 
 .group-image {
   height: 50%;
