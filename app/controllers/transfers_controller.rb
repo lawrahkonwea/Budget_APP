@@ -11,6 +11,8 @@ class TransfersController < ApplicationController
     @groups = Group.created_by_current_user(current_user)
   end
 
+  # rubocop:disable Metrics/CyclomaticComplexity
+  # rubocop:disable Metrics/PerceivedComplexity
   def create
     if params[:transfer][:group_ids].present? && params[:transfer][:group_ids].all? do |id|
          id.to_i.zero?
@@ -35,6 +37,8 @@ class TransfersController < ApplicationController
     end
   end
 
+  # rubocop:enable Metrics/CyclomaticComplexity
+  # rubocop:enable Metrics/PerceivedComplexity
   def show
     @transfer = Transfer.find(params[:id])
   end

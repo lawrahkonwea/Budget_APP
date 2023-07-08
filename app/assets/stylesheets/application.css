@@ -182,6 +182,7 @@ h3 {
 .group_main_title {
   align-self: center;
   font-size: 2rem;
+  padding: 5px;
 }
 
 .main_group_section {
@@ -193,21 +194,19 @@ h3 {
 }
 
 .groups_section {
-  display: flex;
-  flex-wrap: wrap;
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  /* background: #fff; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background: #fff;
   justify-content: space-between;
-  padding: 0.4rem;
+  padding: 10px;
   border-radius: 7px;
   align-items: center;
   gap: 1rem;
-  background-color: red;
+  margin-bottom: 5px;
 }
 
 .group-image {
- background-color: orange;
-  width: 100px;
+  width: 80px;
 }
 
 .group_name_div {
