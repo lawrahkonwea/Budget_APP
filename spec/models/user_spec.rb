@@ -1,24 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  subject do
-    User.new({ full_name: 'Tejiri', email: 'bimbo@gmail.com', password: 'qqqqqqqq', password_confirmation: 'qqqqqqqq' })
+  subject(:user) do
+    User.new(full_name: 'Tejiri', email: 'bimbo@gmail.com', password: 'qqqqqqqq', password_confirmation: 'qqqqqqqq')
   end
 
-  before { subject.save }
+  before { user.save }
 
-  it 'Full Name should be present' do
-    subject.full_name = nil
-    expect(subject).to_not be_valid
+  it 'validates presence of Full Name' do
+    user.full_name = nil
+    expect(user).to_not be_valid
   end
 
-  it 'password must always be present' do
-    subject.password = nil
-    expect(subject).to_not be_valid
+  it 'validates presence of password' do
+    user.password = nil
+    expect(user).to_not be_valid
   end
 
-  it 'Password must have length greater than 6' do
-    subject.password = 'qqqqq'
-    expect(subject).to_not be_valid
+  it 'validates password length greater than 6' do
+    user.password = 'qqqqq'
+    expect(user).to_not be_valid
   end
 end
