@@ -12,13 +12,19 @@ class TransfersController < ApplicationController
   end
 
   def create
+    if params[:transfer][:group_ids].present? && params[:transfer][:group_ids].all? do |id|
+         id.to_i.zero?
+       end
+      render :new
+      return
+    end
     params = transfer_params
     @transfer = Transfer.new(name: params[:name], amount: params[:amount])
     @transfer.author = current_user
     @groups_id = params[:group_ids]
 
     @groups_id.each do |id|
-      group = Group.find(id) unless id == ''
+      group = Group.find(id) unless id == '0'
       @transfer.groups.push(group) unless group.nil?
     end
 

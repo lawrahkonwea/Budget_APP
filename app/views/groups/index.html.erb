@@ -8,7 +8,7 @@
 <div class="groups_section">
   <% @groups.each do |group| %>
     <div>
-      <%= image_tag(group.icon || '', alt:'Image not found', class: "group_image") %>
+      <img class="group_image" src="<%= group.icon %>" alt="icon" />
     </div>
     <div class="group_name_div">
       <p><%= link_to group.name, group_transfers_path(group),  class: "group_name" %></p>

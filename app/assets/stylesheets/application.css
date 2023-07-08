@@ -193,19 +193,21 @@ h3 {
 }
 
 .groups_section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  background: #fff;
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  /* background: #fff; */
   justify-content: space-between;
   padding: 0.4rem;
   border-radius: 7px;
   align-items: center;
-  gap: 40px;
+  gap: 1rem;
+  background-color: red;
 }
 
 .group-image {
-  height: 50%;
-  width: 50%;
+ background-color: orange;
+  width: 100px;
 }
 
 .group_name_div {
