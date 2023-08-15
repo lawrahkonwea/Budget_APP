@@ -74,23 +74,12 @@ h3 {
   background-color: white;
   padding: 2em 2em;
   border-radius: 10px;
-  height: 20em;
+  height: 25em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   box-shadow: 6px 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.field input[type="name"],
-.field input[type="email"],
-.field input[type="password"] {
-  padding: 0.5em 1em;
-  border-radius: 6px;
-  color: #434b54;
-  background-color: #fff;
-  margin-bottom: 5px;
-  width: 100%;
 }
 
 .input-field {
@@ -100,6 +89,14 @@ h3 {
   background-color: #fff;
   margin-bottom: 5px;
   width: 100%;
+  border: none;
+  border-bottom: 2px solid #3778c2;
+}
+
+.input-field:focus {
+  outline: none;
+  border-bottom: 2px solid #5fb523;
+  font-size: 15px;
 }
 
 .up {
@@ -115,9 +112,47 @@ h3 {
   transition: 0.2s ease-in-out;
 }
 
-.log_link a {
+.back {
+  background-color: gray;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.3rem 0.8rem;
+  border: none;
+}
+
+.back a,
+.category a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.log-link a {
+  font-size: 15px;
   text-decoration: none;
   color: #3778c2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: -20px;
+  margin-top: 10px;
+}
+
+.group_name_div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.group_name_div a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #434b54;
+  align-items: center;
+}
+
+.log-link a:hover {
+  color: #5fb523;
 }
 
 .nav-group {
@@ -160,20 +195,6 @@ h3 {
   cursor: pointer;
 }
 
-.back {
-  background-color: gray;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 0.3rem 0.8rem;
-  border: none;
-}
-
-.back a,
-.category a {
-  text-decoration: none;
-  color: #fff;
-}
-
 .group_main_div {
   display: flex;
   flex-direction: column;
@@ -187,6 +208,7 @@ h3 {
 
 .main_group_section {
   display: flex;
+  justify-content: center;
   flex-direction: column;
   background: #f1f1f1;
   padding: 1.5rem 2rem;
@@ -201,26 +223,15 @@ h3 {
   padding: 10px;
   border-radius: 7px;
   align-items: center;
+  text-align: center;
   gap: 1rem;
   margin-bottom: 5px;
 }
 
 .group-image {
   width: 80px;
-}
-
-.group_name_div {
   display: flex;
-  flex-direction: column;
   justify-content: start;
-  gap: 1rem;
-}
-
-.group_name_div a {
-  text-decoration: none;
-  font-size: 1.6rem;
-  color: #434b54;
-  align-items: center;
 }
 
 .group_total_amount {
